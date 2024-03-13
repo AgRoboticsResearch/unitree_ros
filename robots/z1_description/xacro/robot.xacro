@@ -315,8 +315,8 @@
         <!-- add the intel realsense to the sensor arch if needed -->
         <link name="realsense_mountpoint"/>
         <joint name="realsense_mountpoint_joint" type="fixed">
-            <origin xyz="-0.043 0 0.07" rpy="0 0.1745 0" />
-            <parent link="link_gripper"/>
+            <origin xyz="0.01 0 0.07" rpy="0 0.1745 0" />
+            <parent link="link06"/>
             <child link="realsense_mountpoint" />
         </joint>
         <xacro:intel_realsense_mount prefix="camera" frame="camera" topic="camera" parent_link="realsense_mountpoint"/>
@@ -324,7 +324,7 @@
 
     <xacro:if value="$(arg HitbotGripper)">
         <joint name="gripper_mount" type="fixed">
-            <origin xyz="0.0513 0 0" rpy="0 0 0" />
+            <origin xyz="0.0514 0 0" rpy="0 0 0" />
             <parent link="link06"/>
             <child link="link_gripper" />
         </joint>
@@ -358,15 +358,15 @@
         </link>
 
         <joint name="gripper_1" type="fixed">
-            <origin xyz="0.087 0 -0.0005" rpy="0 0 0" />
+            <origin xyz="0.097 0 -0.0005" rpy="0 0 0" />
             <parent link="link_gripper"/>
             <child link="link_gripper_1" />
-            <axis xyz="0 1 0" />
+            <!-- <axis xyz="0 1 0" />
             <limit
                 lower="0"
                 upper="0.2"
                 effort="2000"
-                velocity="1" />
+                velocity="1" /> -->
         </joint>
         <link name="link_gripper_1">
             <inertial>
@@ -398,7 +398,7 @@
         </link>
 
         <joint name="gripper_2" type="fixed">
-            <origin xyz="0.087 0 -0.0005" rpy="0 0 0" />
+            <origin xyz="0.097 0 -0.0005" rpy="0 0 0" />
             <parent link="link_gripper"/>
             <child link="link_gripper_2" />
             <axis xyz="0 -1 0" />
