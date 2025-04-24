@@ -7,8 +7,8 @@
     <xacro:include filename="$(find z1_description)/xacro/transmission.xacro"/>
 
     <xacro:arg name="UnitreeGripper" default="false"/>
-    <xacro:arg name="RealSense" default="true"/>
-    <xacro:arg name="HitbotGripper" default="true"/>
+    <xacro:arg name="RealSense" default="false"/>
+    <xacro:arg name="HitbotGripper" default="false"/>
 
     <link name="world"/>
 
